@@ -19,7 +19,7 @@ class GameLogic:
         print('Find the word :', self.guess.secret)
         letter = self._input()
         if self.guess.check(letter):
-            print('You find a letter !')
+            print('You found a letter !')
             self.guess.replace(letter)
             return not self.guess.is_found()
         else:
@@ -76,7 +76,7 @@ if __name__ == '__main__':
     if game.guess.is_found():
         print('You Win !')
     else:
-        print('You Lose !')
+        print('You Loose !')
     print('End of game')
 
 
