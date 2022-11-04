@@ -32,7 +32,9 @@ class GameLogic:
         return self.limit - len(self.letters)
 
     def _input(self):
-        letter = input('Give me a letter (attempt number {})'.format(len(self.letters)))[:1].lower()
+        letter = input(
+            'Give me a letter (attempt number {})'.format(len(self.letters))
+        )[:1].lower()
         if not letter or not letter in ascii_lowercase:
             print('Try again, ASCII letter only')
             return self._input()
@@ -69,7 +71,14 @@ class Word(str):
 
 
 if __name__ == '__main__':
-    print('#######################', 'Welcome in the v1.0 of', 'Valbou Secret Word Game', '#######################', sep="\n")
+    print(
+        '#'*23,
+        'Welcome in the v1.0 of',
+        'Valbou Secret Word Game',
+        '#'*23,
+        sep="\n"
+    )
+
     game = GameLogic()
     while game.attempt():
         pass
