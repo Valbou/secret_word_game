@@ -50,7 +50,7 @@ class Word(str):
     secret = ""
 
     def __init__(self, *args, **kwargs):
-        super(Word, self).__init__()
+        super().__init__()
         self.length = len(self)
         self.secret = "_"*self.length
 
